@@ -1,0 +1,289 @@
+body {
+	background-color: white;
+	color: black;
+	margin: auto;
+	width: 100%;
+	min-width: 360px;
+	margin-top: 2%;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+h1 {
+	font-family: colaborate, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+h2 {
+	font-size: 36pt;
+	display: block;
+	margin: auto;
+	text-align: center;
+	font-family: colaborate, 'Helvetica Neue', Helvetica, sans-serif;	
+}
+
+h3 {
+	font-size: 24pt;
+	text-align: left;
+	margin-bottom: 20px;
+	font-family: colaborate, 'Helvetica Neue', Helvetica, sans-serif;
+}
+
+footer {
+	text-align: center;
+	padding: 5px;
+	color: white;
+	background-color: black;
+	background-image: url("../media/textures/navBackground.png");
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	box-shadow: 3px 3px 20px #000;
+}
+
+hr {
+	width: 65%;
+}
+
+img {
+	box-shadow: 4px 4px 20px #000;
+}
+
+li {
+	list-style-type: none;
+	text-decoration: none;
+}
+
+#title {
+	font-family: colaborate, 'Helvetica Neue', Helvetica, sans-serif;
+	background-image: url("../media/textures/background1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-left: 3%;
+	color: white;
+	padding-top: 150px;
+	font-size: 32pt;
+	padding-bottom: 175px;
+	line-height: 160%;
+}
+
+#title h1 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 3%;
+	font-size: 92pt;
+}
+
+#smallTitle {
+	font-family: colaborate, 'Helvetica Neue', Helvetica, sans-serif;
+	background-image: url("../media/textures/background1.jpg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
+	padding-left: 3%;
+	color: white;
+	padding-top: 50px;
+	font-size: 32pt;
+	padding-bottom: 50px;
+	line-height: 160%;
+}
+
+#smallTitle h1 {
+	padding-top: 0px;
+	padding-bottom: 0px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	padding-left: 3%;
+	font-size: 64pt;
+}
+
+#indentedLine {
+	padding-left: 8%;
+}
+
+#navBar {
+	display: inline;
+	margin: 0;
+	padding: 0;
+	top:0;
+	left: 0;
+	margin: 0px;
+	width: 100%;
+	list-style-type: none;
+	position: fixed;
+	background-color: black;
+	background-image: url("../media/textures/navBackground.png");
+	background-repeat: repeat-x;
+	background-attachment: fixed;
+	box-shadow: 3px 3px 20px #000;
+}
+
+#navBar li a {
+	color: white;
+	float: left;
+    text-align: center;
+	font-size: 20pt;
+    padding: 7px 3% 7px 3%;
+    text-decoration: none;
+}
+
+#navBar li a:hover {
+	text-shadow: 2px 2px 20px #FFF;
+}
+
+#featured {
+	padding: 45px 20% 100px 20%;
+	font-size: 16pt;
+}
+
+#featured h2 {
+	margin-bottom: 10px;
+}
+
+#featured img {
+	margin: auto;
+	margin-top: 25px;
+	margin-bottom: 25px;
+	width: 85%;
+	display: block;
+}
+
+#aboutMe {
+	float: right;
+	font-size: 14pt;
+	color: white;
+	background-color: #202020;
+	padding: 100px 21% 100px 21%;
+}
+
+#aboutMe img {
+	float: left;
+	width: 37%;
+	margin-right: 35px;
+	margin-bottom: 25px;
+}
+
+#aboutMe li{
+	font-size: 16pt;
+	display: block;
+	margin-top: 5px;
+}
+
+#aboutMe a:hover{
+	text-shadow: 2px 2px 20px #FFF;
+}
+
+#aboutMe a:visited{
+	color: white;
+}
+
+.black {
+	background-color: #202020;
+	color: white;
+}
+
+.white {
+	background-color: white;
+	color: black;
+}
+
+.white a {
+	color: black;
+}
+
+.black a {
+	color: white;
+}
+
+.white a:hover {
+	text-shadow: 2px 2px 20px #000;
+}
+
+.black a:hover {
+	text-shadow: 2px 2px 20px #FFF;
+}
+
+.project {
+	margin: auto;
+	padding: 45px 15% 45px 15%;
+	font-size: 16pt;
+	text-align: center;
+}
+
+.project p {
+	text-align: left;
+}
+
+.project img {
+	width: 65%;
+}
+
+.project ul {
+
+	padding: 0;
+}
+
+.project ul li {
+	display: inline;
+}
+
+.project ul li img {
+	width: 45%;
+	margin-bottom: 25px;
+}
+
+@font-face {
+	font-family: colaborate;
+	src: url(../media/fonts/Colaborate/colabThi.otf);
+}
+
+@media screen and (max-width: 780px) {
+	body {
+		margin-left: 0;
+		margin: auto;
+		margin-top: 100px;
+		width: 90%;
+	}
+	
+	h1 {
+		font-size: 32pt;
+	}
+	
+	#featured h2{
+		font-size: 22pt;
+	}
+	
+	#navBar {
+		display: inline;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	}
+	
+	#navBar li {
+		padding: 0;
+		margin: 0;
+		float: left;
+		margin: auto;
+	}
+	
+	#navBar li a {
+		padding: 10px 40px 10px 40px;
+	}
+	
+	.stepBlock p {
+		font-size: 12pt;
+	}
+	
+	.stepBlock ul {
+		font-size: 12pt;
+	}
+	
+	.stepBlock h2 {
+		font-size: 18pt;
+	}
+}
