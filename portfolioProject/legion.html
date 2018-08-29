@@ -6,6 +6,16 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>legion</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	
+	<script>
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+		});
+	</script>
 </head>
 <body>
 
@@ -14,25 +24,9 @@
 	</section>
 
 	<ul id="navBar">
-	
-		<li><a href="../index.html">
-			230 Index
-		</a></li>
 		
-		<li><a href="index.html">
-			Home
-		</a></li>
-		
-		<li><a href="index.html">
-			Skills
-		</a></li>
-		
-		<li><a href="projects.html">
-			Projects
-		</a></li>
-		
-		<li><a href="index.html">
-			Notes
+		<li><a href="index.html" id="active">
+			Portfolio
 		</a></li>
 		
 		<li><a href="media/WilliamsResume.pdf">
@@ -44,6 +38,8 @@
 	<section class="project white">
 		
 		<h3>Role: Lead Designer and Programmer</h3>
+		
+		<hr>
 		
 		<p>
 			This is a Unity3D project that I developed on my own for an Interactive
@@ -71,16 +67,16 @@
 			 Legionnaires don’t implement flocking in the traditional sense. Instead of seeking
 			 a centroid, they seek their corresponding position on whichever rank their assigned to. 
 			 The Celts (nothing more than filthy barbarians to the Romans), have no such concept of 
-			 ranks. Therefore, they implement traditional flocking, where they seek the centroid of
-			 the flock.
+			 ranks. Therefore, they implement traditional flocking, where they seek the centroid. The
+			 Celts version of flocking should look more familiar.
 		</p>
 		
 		<hr>
 		
 		<ul>
-			<li><img src="media/gameScreens/legion2.png" alt="Legion"></li>
-			<li><img src="media/gameScreens/legion3.png" alt="Legion"></li>
-			<li><img src="media/gameScreens/legion4.png" alt="Legion"></li>
+			<li><a class="fancybox" href="media/gameScreens/legion2.png" data-fancybox-group="gallery"><img src="media/gameScreens/legion2.png" alt="Legion"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/legion3.png" data-fancybox-group="gallery"><img src="media/gameScreens/legion3.png" alt="Legion"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/legion4.png" data-fancybox-group="gallery"><img src="media/gameScreens/legion4.png" alt="Legion"></a></li>
 		</ul>
 	
 	</section>

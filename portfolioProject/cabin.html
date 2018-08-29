@@ -6,6 +6,15 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>cabin</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	
+	<script>
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+		});
+	</script>
 </head>
 <body>
 
@@ -14,25 +23,9 @@
 	</section>
 
 	<ul id="navBar">
-	
-		<li><a href="../index.html">
-			230 Index
-		</a></li>
 		
-		<li><a href="index.html">
-			Home
-		</a></li>
-		
-		<li><a href="index.html">
-			Skills
-		</a></li>
-		
-		<li><a href="projects.html">
-			Projects
-		</a></li>
-		
-		<li><a href="index.html">
-			Notes
+		<li><a href="index.html" id="active">
+			Portfolio
 		</a></li>
 		
 		<li><a href="media/WilliamsResume.pdf">
@@ -44,6 +37,8 @@
 	<section class="project white">
 		
 		<h3>Role: Modeller, Rigger, Texturer</h3>
+		
+		<hr>
 		
 		<p>
 			This is a Unity3D project that I developed with a group for a 3D modelling class. I was the
@@ -62,9 +57,9 @@
 		<hr>
 		
 		<ul>
-			<li><img src="media/gameScreens/cabin4.png" alt="Gunfighter"></li>
-			<li><img src="media/gameScreens/cabin3.png" alt="Gunfighter"></li>
-			<li><img src="media/gameScreens/cabin2.png" alt="Gunfighter"></li>
+			<li><a class="fancybox" href="media/gameScreens/cabin4.png" data-fancybox-group="gallery"><img src="media/gameScreens/cabin4.png" alt="Gunfighter"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/cabin3.png" data-fancybox-group="gallery"><img src="media/gameScreens/cabin3.png" alt="Gunfighter"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/cabin2.png" data-fancybox-group="gallery"><img src="media/gameScreens/cabin2.png" alt="Gunfighter"></a></li>
 		</ul>
 	
 	</section>

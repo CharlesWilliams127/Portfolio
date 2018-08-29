@@ -4,37 +4,98 @@
 	<meta charset="utf-8" />
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+	
 	<title>Charles Williams</title>
+	
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	
+	<script type="text/javascript" src="js/smoothscroll.js"></script>
+	
+	<script>
+		// DHTML fun!
+		$(document).ready(function(){
+		
+			// if the projects button is clicked it will hide skills and unhide projects
+			$("#projects").on("click", function(e){
+				console.log('clickedProjects');
+				$("#skillsContent").hide();
+				$("#projectsContent").fadeIn();
+				
+				$("#skillsContent").removeClass("selected");
+				$("#projectsContent").addClass("selected");
+			});
+			
+			// if the skills button is clicked it will hide projects and unhide skills
+			$("#skills").on("click", function(e){
+				console.log('clickedSkills');
+				
+				$("#projectsContent").hide();
+				$("#skillsContent").fadeIn();
+				
+				$("#projectsContent").removeClass("selected");
+				$("#skillsContent").addClass("selected");
+			});
+			
+			// when the user hits the close button it should re-hide whatever section they are on and take them to the thumbnails section
+			$("#projectsClose").on("click", function(e){
+				$("#projectsContent").fadeOut(1100);
+				
+				$("#projectsContent").removeClass("selected");
+			});
+			
+			// when the user hits the close button it should re-hide whatever section they are on and take them to the thumbnails section
+			$("#skillsClose").on("click", function(e){
+				$("#skillsContent").fadeOut(900);
+				
+				$("skillsContent").removeClass("selected");
+			});
+		});
+		
+		// set the about me pointer to appear when the user scrolls past
+		function appear() {
+			document.querySelector(".bottom").style.opacity = "1";
+		}
+		
+		// make it disappear when they go off
+		function disappear() {
+			document.querySelector(".bottom").style.opacity = "0";
+		}
+		
+		// set the about me pointer to appear when the user scrolls past
+		function blackAppear() {
+			document.querySelector(".blackBottom").style.opacity = "1";
+		}
+		
+		// make it disappear when they go off
+		function blackDisappear() {
+			document.querySelector(".blackBottom").style.opacity = "0";
+		}
+		
+		// set the about me pointer to appear when the user scrolls past
+		function whiteAppear() {
+			document.querySelector(".whiteBottom").style.opacity = "1";
+		}
+		
+		// make it disappear when they go off
+		function whiteDisappear() {
+			document.querySelector(".whiteBottom").style.opacity = "0";
+		}
+	</script>
 </head>
 <body>
 
 	<section id="title">
 		Allow me to introduce myself, I'm
-		<h1><strong>Charles</strong> Williams</h1> 
-		<div id="indentedLine">and this is my portfolio.</div>
+		<h1>Charles Williams</h1> 
+		<div id="indentedLine">and I make Games and Software</div>
 	</section>
 
 	<ul id="navBar">
-	
-		<li><a href="../index.html">
-			230 Index
-		</a></li>
 		
-		<li><a href="index.html">
-			Home
-		</a></li>
-		
-		<li><a href="index.html">
-			Skills
-		</a></li>
-		
-		<li><a href="projects.html">
-			Projects
-		</a></li>
-		
-		<li><a href="notes.html">
-			Notes
+		<li><a href="index.html" id="active">
+			Portfolio
 		</a></li>
 		
 		<li><a href="media/WilliamsResume.pdf">
@@ -43,25 +104,214 @@
 		
 	</ul>
 	
-	<section id="featured">
-		<h2>Featured Project</h2>
+	<section id="thumbnails" class = "white">
+		<h1>What would you like to see?</h1>
 		
 		<hr>
 	
-		<img src="media/gameScreens/Legion1.png" alt="Featured Project">
+		<h2 class="left marginLeft">My Skills</h2>
 		
-		<hr>
+		<h2 class="right marginRight">My Projects</h2>
+	
+		<a href = "index.html#skillsContent" class="smoothScroll"><img src="media/programmingGraph.png" alt="Graph" class="left marginLeft" id="skills"></a>
+	
+		<a href = "index.html#projectsContent" class="smoothScroll"><img src="media/gameScreens/Legion1.PNG" alt="Featured Project" class="right marginRight" id="projects"></a>
 		
-		<h2>Legion</h2>
+		<div id="center">
+			<h2>About Me</h2>
+			
+			<div id="arrows">
+			
+				<a href="index.html#aboutMe" class="smoothScroll"><img src="media/downArrowHover.png" alt="arrowBottom" class="bottom"></a>
+			
+				<a href="index.html#aboutMe" class="smoothScroll"><img onmouseover="appear()" onmouseout="disappear()" src="media/downArrow.png" alt="arrowTop" class="top"></a>
+				
+			</div>
+		</div>
 		
-		<p>
-			This is one of my passion projects, made in unity3D. Currently it feautures a unit of 
-			slightly greater strength than a Roman <em>Contubernium</em> (eight men), marching in a 
-			rigid formation while following their <em>decanus</em> (officer). To learn more about
-			the current status of this project and my plans for its future check it out in the 
-			projects tab on this site!
-		</p>
 	</section>
+	
+	<div id="projectsContent">
+		<section class="project white">
+			<h2>The Cabin</h2>
+			
+			<hr>
+			
+			<a href="cabin.html"><img src="media/gameScreens/cabin1.PNG" alt="Cabin"></a>
+			
+			<hr>
+			
+				A Unity3D project that in which a team and I created a 
+				fully modeled, textured, and animated log cabin.
+		
+		</section>
+		
+		<section class="project black">
+			<h2>Legion</h2>
+			
+			<hr>
+			
+			<a href="legion.html"><img src="media/gameScreens/Legion1.PNG" alt="Legion"></a>
+			
+			<hr>
+			
+				A Unity3D project that simulates a small group of Roman
+				Legionnaires marching using flocking and advanced steering
+				algorithms.
+		
+		</section>
+		
+		<section class="project white">
+			<h2>The Gunfighter</h2>
+			
+			<hr>
+			
+			<a href="gunfighter.html"><img src="media/gameScreens/gunfighter2.jpeg" alt="Gunfighter"></a>
+			
+			<hr>
+			
+				A fast-paced, card-slinging, shoot-em-up card game with an
+				emphasis on quick reflexes and careful preperation.
+		
+		</section>	
+		
+		<section class="project black">
+			<h2>How to play Dwarf Fortress</h2>
+			
+			<hr>
+			
+			<a href="dwarf.html"><img src="media/gameScreens/dwarf_fortress_lineout.png" alt="dwarf"></a>
+			
+			<hr>
+			
+				A website I designed with the intent of teaching users
+				the very complicated game of Dwarf Fortress.
+		
+		</section>	
+		
+		<section class="project white">
+			<h2>Asteroids</h2>
+			
+			<hr>
+			
+			<a href="asteroids.html"><img src="media/gameScreens/a1.PNG" alt="Asteroids"></a>
+			
+			<hr>
+			
+				A very simple processing application that I developed that
+				replicates the classic game <cite>Asteroids</cite> with my
+				own spin on it.
+				
+			<hr>
+			
+			<br>
+		
+		</section>	
+		
+		<section class = "project white">
+		
+			<h2>Close</h2>
+			
+			<div id="upArrows">
+				<a href="index.html#thumbnails" class="smoothScroll"><img src="media/blackUpArrowHover.png" alt="arrowBottom" class="blackBottom"></a>
+			
+				<a href="index.html#thumbnails" class="smoothScroll"><img onmouseover="blackAppear()" onmouseout="blackDisappear()" src="media/blackUpArrow.png" alt="arrowTop" class="top" id="projectsClose"></a>
+			</div>
+			
+		</section>
+	</div>
+	
+	<div id="skillsContent">	
+		<section class="skills white">
+			<h2>My Programming Skills</h2>
+			
+			<hr>
+			
+			<img src="media/programmingGraph.png" alt="programming graph">
+			
+			<hr>
+			
+			<h3>C#</h3>
+			
+			<p>
+				C# was the first language that I learned after coming to RIT.
+				I easily consider it the language that I have the most knowledge
+				in. I have made more applications than I can remember in C# (mostly
+				small, but also some very large projects). In my free time, I use
+				C# quite heavily to work on passion projects.
+			</p>
+			
+			<hr>
+			
+			<h3>C++</h3>
+			
+			<p>
+				C++ is a language that I am currently learning and I have grown to really
+				enjoy programming in it. While I am no expert, I am definitely feeling 
+				comfortable with this language and am enjoying learning more about it.
+				Currently I am working in C++ using OpenGL to implement a 3D game of
+				billiards!
+			</p>
+			
+			<hr>
+			
+			<h3>JavaScript</h3>
+			
+			<p>
+				JavaScript is another language I am currently learning. However, I have only just begun
+				to interact with and use it. I am still very much a beginner when it comes to this
+				language. However, I am constantly learning more about it and the more I learn
+				the more I like!
+			</p>
+			
+			<hr>
+			
+			<h3>HTML/CSS</h3>
+			
+			<p>
+				For someone who wants to focus more on the back-end side of things, I actually really
+				enjoy using HTML and CSS! This site you're on now was made entirely with these
+				tools, and I enjoy building websites and interactive experiences with them.
+				I have worked a lot with HTML and CSS and am quite proud of all I've 
+				been able to accomplish with these tools.
+			</p>
+			
+			<hr>
+			
+			<h3>Python</h3>
+			
+			<p>
+				Python is a language that I am currently re-teaching myself. I learned it
+				once, in the long gone years of high school. Now, as I am pursuing a minor
+				in software engineering, I am re-learing it to align myself more with that
+				curriculum.
+			</p>
+			
+		</section>
+		
+		<section class="skills black">
+			<h2>Software I'm familiar with</h2>
+			
+			<hr>
+			
+			<img src="media/softwareGraph.png" alt="programming graph">
+			
+			<hr>
+			
+		</section>
+		
+		<section class = "project black">
+		
+			<h2>Close</h2>
+			
+			<div id="upArrows">
+				<a href="index.html#thumbnails" class="smoothScroll"><img src="media/whiteUpArrowHover.png" alt="arrowBottom" class="whiteBottom"></a>
+			
+				<a href="index.html#thumbnails" class="smoothScroll"><img onmouseover="whiteAppear()" onmouseout="whiteDisappear()" src="media/whiteUpArrow.png" alt="arrowTop" class="top" id="skillsClose"></a>
+			</div>
+			
+		</section>
+	</div>
 	
 	<section id="aboutMe">
 		<h2>About Me</h2>
@@ -71,7 +321,7 @@
 		<img src="media/me.jpg" alt="Picture of Me">
 		
 		<p>
-			Hey! I'm Charles Williams and I am currently a second year student studying Game Design and
+			Hey! I'm Charles Williams and I am currently a student studying Game Design and
 			Developement at the Rochester Institute of Technology. I have a passion for programming, web
 			design, and game design and I hope that in this portfolio you can get a sample of each!
 			<br> <br>
@@ -79,16 +329,16 @@
 		</p>
 		
 		<ul>
-			<li><i class="fa fa-envelope-o"></i> crw4147@rit.edu</a></li>
+			<li><i class="fa fa-envelope-o"></i> crw4147 (at) rit.edu</a></li>
 			<li><a href="https://github.com/CharlesWilliams127"><i class="fa fa-github"></i> GitHub</a></li>
 			<li><a href="https://www.facebook.com/profile.php"><i class="fa fa-facebook-square"></i> Facebook</a></li>
-			<li><a href="https://github.com/CharlesWilliams127"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
+			<li><a href="https://www.linkedin.com/in/charles-williams-8ba40aa4?authType=NAME_SEARCH&authToken=jSt7&locale=en_US&trk=tyah&trkInfo=clickedVertical%3Amynetwork%2CclickedEntityId%3A371275918%2CauthType%3ANAME_SEARCH%2Cidx%3A1-1-1%2CtarId%3A1461377133177%2Ctas%3Acharle"><i class="fa fa-linkedin-square"></i> LinkedIn</a></li>
 			<li><a href="media/WilliamsResume.pdf"><i class="fa fa-file-text"></i> Resume</a></li>
 		</ul>
 	</section>
-	
+
 	<footer>
-		Copyright 2016 Charles Williams<br>
+		Copyright 2016-2018 Charles Williams<br>
 		All rights reserved
 	</footer>
 	

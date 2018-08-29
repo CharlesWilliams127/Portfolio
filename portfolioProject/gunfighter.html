@@ -6,6 +6,17 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 	<title>gunfighter</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script type="text/javascript" src="js/fancybox/source/jquery.fancybox.js?v=2.1.5"></script>	
+	
+	<link rel="stylesheet" type="text/css" href="js/fancybox/source/jquery.fancybox.css?v=2.1.5" media="screen" />
+	
+	<script>
+		$(document).ready(function() {
+			$('.fancybox').fancybox();
+		});
+	</script>
 </head>
 <body>
 
@@ -14,25 +25,9 @@
 	</section>
 
 	<ul id="navBar">
-	
-		<li><a href="../index.html">
-			230 Index
-		</a></li>
 		
-		<li><a href="index.html">
-			Home
-		</a></li>
-		
-		<li><a href="index.html">
-			Skills
-		</a></li>
-		
-		<li><a href="projects.html">
-			Projects
-		</a></li>
-		
-		<li><a href="index.html">
-			Notes
+		<li><a href="index.html" id="active">
+			Portfolio
 		</a></li>
 		
 		<li><a href="media/WilliamsResume.pdf">
@@ -44,6 +39,8 @@
 	<section class="project white">
 		
 		<h3>Role: Lead Designer</h3>
+		
+		<hr>
 		
 		<p>
 			This is a card game that is currently in developement by a
@@ -63,11 +60,11 @@
 		</p>
 		
 		<hr>
-		
+	
 		<ul>
-			<li><img src="media/gameScreens/gunfighter3.jpg" alt="Gunfighter"></li>
-			<li><img src="media/gameScreens/gunFighter4.jpeg" alt="Gunfighter"></li>
-			<li><img src="media/gameScreens/gunFighter1.jpg" alt="Gunfighter"></li>
+			<li><a class="fancybox" href="media/gameScreens/gunfighter3.JPG" data-fancybox-group="gallery"><img src="media/gameScreens/gunfighter3.JPG" alt="Gunfighter"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/gunfighter4.jpeg" data-fancybox-group="gallery"><img src="media/gameScreens/gunfighter4.jpeg" alt="Gunfighter"></a></li>
+			<li><a class="fancybox" href="media/gameScreens/gunFighter1.JPG" data-fancybox-group="gallery"><img src="media/gameScreens/gunFighter1.JPG" alt="Gunfighter"></a></li>
 		</ul>
 	
 	</section>

@@ -1,0 +1,6 @@
+AuthType shibboleth
+AuthName "RIT"
+ShibRequireSession On
+SSLRequireSSL
+require valid-user
+ErrorDocument 404 /crw4147/230/enhancedPortfolio/error404.html
